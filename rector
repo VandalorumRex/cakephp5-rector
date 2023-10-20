@@ -1,0 +1,2 @@
+sed -i '/RequestHandler/d' $1/src/Controller/AppController.php
+sed -i -r "s|setOption(\'jsonOptions\', JSON_UNESCAPED_UNICODE \| JSON_PRETTY_PRINT)|setOption(\'jsonOptions\', JSON_UNESCAPED_UNICODE \| JSON_PRETTY_PRINT)\r\n-\>setClassName(\'Json\')|" $1/src/Controller/AppController.php
